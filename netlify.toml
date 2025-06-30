@@ -1,0 +1,12 @@
+[build]
+  publish = "."               # Serves from the root folder
+  functions = "functions"     # Folder for Netlify Functions
+
+[functions]
+  directory = "functions"
+  node_bundler = "esbuild"    # Use esbuild for faster bundling
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200

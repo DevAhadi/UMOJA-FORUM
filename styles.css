@@ -1,0 +1,191 @@
+/* Root and Base */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #e3f2fd;
+  color: #212121;
+  line-height: 1.6;
+}
+a {
+  color: #1976d2;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+h1, h2, h3 {
+  color: #0d47a1;
+  margin-top: 0;
+}
+
+/* Header Section (shared) */
+.page-header,
+.hero {
+  background: #2196f3;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+.page-header h1,
+.hero h1 {
+  font-size: 2.5em;
+}
+.page-header p,
+.hero p {
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+/* Navigation (optional for index) */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #1976d2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+.logo {
+  color: white;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+.menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.menu a {
+  color: white;
+  font-weight: bold;
+}
+
+/* Sections */
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+section p {
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Community Cards */
+.community-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.member-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 260px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.member-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Forum Styles */
+.chat-container {
+  max-width: 550px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+.chat-box {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background: #f1f8ff;
+}
+.message {
+  background: #e0f7fa;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+}
+.message img {
+  max-width: 100%;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+.message small {
+  display: block;
+  font-size: 0.75em;
+  color: #666;
+  margin-top: 6px;
+}
+.chat-form {
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+  background: #fafafa;
+  border-top: 1px solid #ddd;
+}
+.chat-form input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+.chat-form input[type="file"] {
+  width: 100px;
+}
+.chat-form button {
+  background: #2196f3;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1976d2;
+  color: white;
+  font-size: 0.9em;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    flex-direction: column;
+    background: #1976d2;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: flex;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
